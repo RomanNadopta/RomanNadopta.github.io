@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	
+	<script src ="main.js"></script>
 </head>
 <body>
  <h2>Дз lesson 12</h2>
@@ -39,6 +39,40 @@
 			break;
 		}
 	</script>
-
+	<h2>Дз Lesson 13</h2>
+	<script>
+		function fined(array, value) {
+			for (var i = 0; i < array.length; i++) {
+				if (array[i] === value ) return i;
+			}
+			return -1;
+		}
+	</script>
+	<script>
+		function filterRange(arr, a , b) {
+			var result = [];
+			for (var i = 0; i < arr.length; i++) {
+				if (arr[i] >= a && arr[i] <=b) {
+					result.push(arr[i]);
+				}
+			}
+			return result;
+		}
+		var arr = [5, 4, 3, 8, 0];
+		var filtered = filterRange(arr, 3, 5);
+		alert( filtered);
+	</script>
+	<script>
+		function camelize(str) {
+			var arr = str.split('-');
+			for (var i = 1; i < arr.length; i++) {
+				arr[i] = arr[i].charAt(0). toUpperCase() + arr[i].slice(1);
+			}
+			return arr.join('');
+		}
+		alert( camelize("background-color") );
+		alert( camelize("list-stile-image") );
+		alert( camelize( "-webkit-transition") );
+	</script>
 </body>
 </html>
